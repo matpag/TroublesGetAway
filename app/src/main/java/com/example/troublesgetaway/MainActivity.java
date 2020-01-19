@@ -5,9 +5,12 @@ import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.troublesgetaway.data.model.LoginResponse;
 
 import java.util.List;
 
@@ -39,30 +42,34 @@ public class MainActivity extends AppCompatActivity {
                 String password = passwordTxt.getText().toString();
                 if (!TextUtils.isEmpty(username.trim()) && !TextUtils.isEmpty(password.trim())) {
                     tryLogin(username, password);
-                } else {
-                    dialog = new Dialog();
-                    dialog.setTitle("@string/invalidLoginParameters");
-                    dialog.setCancelable(true);
-                    dialog.show();
-
                 }
+//                } else {
+//                    dialog = new Dialog();
+//                    dialog.setTitle("@string/invalidLoginParameters");
+//                    dialog.setCancelable(true);
+//                    dialog.show();
+//
+//                }
             }
         });
     }
 
     private void tryLogin(String username, String password) {
         MyApiService apiService = RetrofitService.getInstance();
-        apiService.login(username, password).enqueue(new Callback<List<Void>>() {
+        apiService.login(username, password).enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<List<Void>> call, Response<List<Void>> response) {
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 //risposta affermativa
                 if (response.isSuccessful()) {
-                    //vai avanti
+                    LoginResponse resp = response.body();
+
+                } else {
+
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Void>> call, Throwable t) {
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
                 //risposta connessione
             }
         });

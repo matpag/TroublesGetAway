@@ -1,7 +1,11 @@
 package com.example.troublesgetaway;
 
+import com.example.troublesgetaway.data.model.LoginResponse;
+
 import java.util.List;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -17,7 +21,15 @@ public class RetrofitService {
 
     public static MyApiService getInstance() {
         if (service == null) {
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .addInterceptor(loggingInterceptor)
+                    .build();
+
             Retrofit retrofit = new Retrofit.Builder()
+                    .client(client)
                     .addConverterFactory(GsonConverterFactory.create())
                     .baseUrl(BASE_URL)
                     .build();
@@ -31,6 +43,6 @@ interface MyApiService {
 
     @FormUrlEncoded
     @POST("login.php")
-    Call<List<Void>> login(@Field("user") String username, @Field("password") String password);
+    Call<LoginResponse> login(@Field("user") String username, @Field("password") String password);
 
 }
