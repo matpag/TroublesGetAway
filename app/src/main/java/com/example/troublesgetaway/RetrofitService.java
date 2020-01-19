@@ -31,6 +31,6 @@ interface MyApiService {
 
     @FormUrlEncoded
     @POST("login.php")
-    Call<List<Void>> login(@Field("usr") String username, @Field("psw") String password);
+    Call<List<Void>> login(@Field("user") String username, @Field("password") String password);
 
 }

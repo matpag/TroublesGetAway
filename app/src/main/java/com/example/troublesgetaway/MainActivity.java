@@ -1,5 +1,7 @@
 package com.example.troublesgetaway;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText usernameTxt, passwordTxt;
     Button loginBtn;
+    ProgressDialog progressDialog;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(username.trim()) && !TextUtils.isEmpty(password.trim())) {
                     tryLogin(username, password);
                 } else {
-                    //l'utente non ha riempito entrambi i campi
+                    dialog = new Dialog();
+                    dialog.setTitle("@string/invalidLoginParameters");
+                    dialog.setCancelable(true);
+                    dialog.show();
+
                 }
             }
         });

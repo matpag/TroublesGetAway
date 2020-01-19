@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TroublesGetAway</string>
     <string name="welcome_to_troubles_get_away">Welcome to Troubles Get Away!</string>
+    <string name="invalidLoginParameters">Invalid username and/or password</string>
 </resources>
