@@ -62,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 //risposta affermativa
                 if (response.isSuccessful()) {
                     LoginResponse resp = response.body();
+                    if (resp.success) {
+                        return;
+                    } else {
+                        return;
+                    }
 
                 } else {
 

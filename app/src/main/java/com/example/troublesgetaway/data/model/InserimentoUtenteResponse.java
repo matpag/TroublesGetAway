@@ -1,9 +1,5 @@
 package com.example.troublesgetaway.data.model;
 
-public class LoginResponse {
-
+public class InserimentoUtenteResponse {
     public boolean success;
-    public int id;
-    public int tipoUtente;
-
 }

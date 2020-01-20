@@ -1,5 +1,6 @@
 package com.example.troublesgetaway;
 
+import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
 import com.example.troublesgetaway.data.model.LoginResponse;
 
 import java.util.List;
@@ -44,5 +45,8 @@ interface MyApiService {
     @FormUrlEncoded
     @POST("login.php")
     Call<LoginResponse> login(@Field("user") String username, @Field("password") String password);
+
+    @POST("inserisci_utente.php")
+    Call<InserimentoUtenteResponse> inserisciUtente(@Field("user") String username, @Field("password") String password);
 
 }
