@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="OK_Button_Text">OK</string>
+    <string name="Cancel_Button_Text">Annulla</string>
+    <string name="Connection_Error">Errore di connessione</string>
+
     <string name="welcome_to_troubles_get_away">Benvenuto in Troubles Get Away!</string>
     <string name="invalidLoginParameters">Username e/o password non validi!</string>
 </resources>

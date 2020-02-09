@@ -1,5 +1,13 @@
 <resources>
+    <string name="OK_Button_Text">OK</string>
+    <string name="Cancel_Button_Text">Cancel</string>
+    <string name="Connection_Error">Connection error</string>
+
     <string name="app_name">TroublesGetAway</string>
     <string name="welcome_to_troubles_get_away">Welcome to Troubles Get Away!</string>
     <string name="invalidLoginParameters">Invalid username and/or password</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_admin_main">AdminMainActivity</string>
+    <string name="title_activity_comune_main">ComuneMainActivity</string>
+    <string name="title_activity_utente_main">UtenteMainActivity</string>
 </resources>

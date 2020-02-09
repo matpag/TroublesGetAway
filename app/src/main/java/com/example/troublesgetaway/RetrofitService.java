@@ -1,5 +1,8 @@
 package com.example.troublesgetaway;
 
+import android.content.Context;
+import android.support.v4.widget.ContentLoadingProgressBar;
+
 import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
 import com.example.troublesgetaway.data.model.LoginResponse;
 
@@ -19,6 +22,16 @@ public class RetrofitService {
     private static final String BASE_URL = "http://troublegetawaydb.altervista.org/";
 
     private static MyApiService service = null;
+
+    private ContentLoadingProgressBar showDialog(Context context) {
+        ContentLoadingProgressBar contentLoadingProgressBar = new ContentLoadingProgressBar(context);
+        contentLoadingProgressBar.show();
+        return contentLoadingProgressBar;
+    }
+
+    public void dismissDialog(ContentLoadingProgressBar contentLoadingProgressBar) {
+        contentLoadingProgressBar.hide();
+    }
 
     public static MyApiService getInstance() {
         if (service == null) {
@@ -47,6 +60,6 @@ interface MyApiService {
     Call<LoginResponse> login(@Field("user") String username, @Field("password") String password);
 
     @POST("inserisci_utente.php")
-    Call<InserimentoUtenteResponse> inserisciUtente(@Field("user") String username, @Field("password") String password);
+    Call<InserimentoUtenteResponse> inserisciUtente(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("cognome") String cognome, @Field("telefono") Integer telefono, @Field("citta") String citta, @Field("indirizzo") String indirizzo );
 
 }
