@@ -8,4 +8,59 @@
     tools:context=".Utente.UtenteMainActivity"
     tools:showIn="@layout/activity_utente_main">
 
+    <Button
+        android:id="@+id/btnlistaguasti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Lista Guasti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnsegnala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Segnala"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlistaguasti" />
+
+    <Button
+        android:id="@+id/btnguastiut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="I Miei Guasti"
+        app:layout_constraintBottom_toTopOf="@+id/btnprofilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnprofilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="225dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Il Mio Profilo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
 </android.support.constraint.ConstraintLayout>

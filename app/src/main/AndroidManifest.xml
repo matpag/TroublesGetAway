@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Utente.ProfiloUt"></activity>
+        <activity android:name=".Utente.GuastiUt" />
+        <activity android:name=".Utente.Segnala" />
+        <activity android:name=".Utente.Guasti" />
         <activity
             android:name=".Utente.UtenteMainActivity"
             android:label="@string/title_activity_utente_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Comune.ComuneMainActivity"
             android:label="@string/title_activity_comune_main"
