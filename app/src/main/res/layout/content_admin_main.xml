@@ -8,4 +8,54 @@
     tools:context=".Admin.AdminMainActivity"
     tools:showIn="@layout/activity_admin_main">
 
+    <Button
+        android:id="@+id/btngestutenti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="77dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Gestione Utenti"
+        app:layout_constraintBottom_toTopOf="@+id/btngestcomuni"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btngestcomuni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="67dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Gestione Comuni"
+        app:layout_constraintBottom_toTopOf="@+id/btnguasti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnguasti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Lista Guasti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <Button
+        android:id="@+id/btnesci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#00FFCCCB"
+        android:fontFamily="@font/alike"
+        android:text="Esci"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -17,6 +17,7 @@ public class UtenteMainActivity extends AppCompatActivity {
     Button segnalaBtn;
     Button mieiGuasti;
     Button profiloBtn;
+    Button esci;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class UtenteMainActivity extends AppCompatActivity {
         segnalaBtn = findViewById(R.id.btnsegnala);
         mieiGuasti = findViewById(R.id.btnguastiut);
         profiloBtn = findViewById(R.id.btnprofilo);
+        esci = findViewById(R.id.btnesci);
 
         listaGuasti.setOnClickListener(new View.OnClickListener() {
             @Override

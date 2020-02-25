@@ -8,4 +8,53 @@
     tools:context=".Comune.ComuneMainActivity"
     tools:showIn="@layout/activity_comune_main">
 
+    <Button
+        android:id="@+id/btngestione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Gestione Guasti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnguasti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="118dp"
+        android:layout_marginBottom="119dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Lista Guasti"
+        app:layout_constraintBottom_toBottomOf="@+id/btnmsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btngestione" />
+
+    <Button
+        android:id="@+id/btnmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Messaggi"
+        app:layout_constraintBottom_toTopOf="@+id/btnesci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnesci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="129dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/alike"
+        android:text="Esci"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

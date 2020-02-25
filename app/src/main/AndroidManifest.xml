@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Utente.ProfiloUt"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".Admin.Comuni" />
+        <activity android:name=".Admin.Utenti" />
+        <activity android:name=".Comune.Messaggi" />
+        <activity android:name=".Comune.gestGuasti" />
+        <activity android:name=".Utente.ProfiloUt" />
         <activity android:name=".Utente.GuastiUt" />
         <activity android:name=".Utente.Segnala" />
         <activity android:name=".Utente.Guasti" />
