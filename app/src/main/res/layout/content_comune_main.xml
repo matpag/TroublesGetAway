@@ -42,12 +42,12 @@
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
         android:text="Messaggi"
-        app:layout_constraintBottom_toTopOf="@+id/btnesci"
+        app:layout_constraintBottom_toTopOf="@+id/btnannulla"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnesci"
+        android:id="@+id/btnannulla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"

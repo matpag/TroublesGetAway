@@ -1,7 +1,9 @@
 package com.example.troublesgetaway;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,5 +30,13 @@ public class RegisterActivity extends AppCompatActivity {
         usr = findViewById(R.id.usrText);
         pswrd = findViewById(R.id.pswrdText);
         registra = findViewById(R.id.btnregistra);
+
+        registra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrati = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(registrati);
+            }
+        });
     }
 }

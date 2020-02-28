@@ -6,4 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".Utente.Segnala">
 
+    <TextView
+        android:id="@+id/textInd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/alike"
+        android:text="Indirizzo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editInd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:fontFamily="@font/alike"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioAltro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Altro"
+        app:layout_constraintStart_toStartOf="@+id/radioSemaforo"
+        app:layout_constraintTop_toBottomOf="@+id/radioSemaforo" />
+
+    <RadioButton
+        android:id="@+id/radioBuca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Buca Asfalto"
+        app:layout_constraintBottom_toTopOf="@+id/radioLuce"
+        app:layout_constraintStart_toStartOf="@+id/radioLuce" />
+
+    <RadioButton
+        android:id="@+id/radioLuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="Lampione Spento"
+        app:layout_constraintBottom_toTopOf="@+id/radioSemaforo"
+        app:layout_constraintStart_toStartOf="@+id/radioSemaforo" />
+
+    <RadioButton
+        android:id="@+id/radioSemaforo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="204dp"
+        android:text="Semaforo Non Funzionante"
+        app:layout_constraintBottom_toTopOf="@+id/radioAlta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editInd" />
+
+    <TextView
+        android:id="@+id/textTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="38dp"
+        android:fontFamily="@font/alike"
+        android:text="Tipo"
+        app:layout_constraintBottom_toBottomOf="@+id/radioBuca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInd" />
+
+    <TextView
+        android:id="@+id/textStima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/alike"
+        android:text="Stima Pericolosità"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <RadioButton
+        android:id="@+id/radioMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="58dp"
+        android:text="Media"
+        app:layout_constraintStart_toEndOf="@+id/textStima"
+        app:layout_constraintTop_toBottomOf="@+id/textStima" />
+
+    <RadioButton
+        android:id="@+id/radioAlta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="15dp"
+        android:text="Alta"
+        app:layout_constraintStart_toStartOf="@+id/radioMedia"
+        app:layout_constraintTop_toBottomOf="@+id/radioMedia" />
+
+    <RadioButton
+        android:id="@+id/radioBassa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="Bassa"
+        app:layout_constraintBottom_toTopOf="@+id/radioMedia"
+        app:layout_constraintStart_toStartOf="@+id/radioMedia" />
+
+    <Button
+        android:id="@+id/bntinvia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="86dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/alike"
+        android:text="Invia"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnannulla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="89dp"
+        android:fontFamily="@font/alike"
+        android:text="Annulla"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

@@ -2,10 +2,7 @@ package com.example.troublesgetaway.Utente;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -28,7 +25,7 @@ public class UtenteMainActivity extends AppCompatActivity {
         segnalaBtn = findViewById(R.id.btnsegnala);
         mieiGuasti = findViewById(R.id.btnguastiut);
         profiloBtn = findViewById(R.id.btnprofilo);
-        esci = findViewById(R.id.btnesci);
+        esci = findViewById(R.id.btnannulla);
 
         listaGuasti.setOnClickListener(new View.OnClickListener() {
             @Override
