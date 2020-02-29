@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Admin.Utenti">
 
+    <TextView
+        android:id="@+id/textUtenti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/alike"
+        android:text="Lista Utenti:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/listUsers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listUsers"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUtenti" />
 </android.support.constraint.ConstraintLayout>
