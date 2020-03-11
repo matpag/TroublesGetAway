@@ -1,5 +1,7 @@
 package com.example.troublesgetaway.data.model;
 
 public class InserimentoUtenteResponse {
-    public boolean success;
+    public Boolean success;
+    public Integer cause;
+    public String error;
 }

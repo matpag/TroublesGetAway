@@ -59,7 +59,8 @@ interface MyApiService {
     @POST("login.php")
     Call<LoginResponse> login(@Field("user") String username, @Field("password") String password);
 
+    @FormUrlEncoded
     @POST("inserisci_utente.php")
-    Call<InserimentoUtenteResponse> inserisciUtente(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("cognome") String cognome, @Field("telefono") Integer telefono, @Field("citta") String citta, @Field("indirizzo") String indirizzo );
+    Call<InserimentoUtenteResponse> insertUser(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("cognome") String cognome, @Field("email") String emailAddress, @Field("telefono") Integer phone, @Field("comune") String comune);
 
 }

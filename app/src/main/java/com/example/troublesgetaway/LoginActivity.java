@@ -1,14 +1,11 @@
 package com.example.troublesgetaway;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,8 +14,6 @@ import com.example.troublesgetaway.Admin.AdminMainActivity;
 import com.example.troublesgetaway.Comune.ComuneMainActivity;
 import com.example.troublesgetaway.Utente.UtenteMainActivity;
 import com.example.troublesgetaway.data.model.LoginResponse;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         usernameTxt = findViewById(R.id.username);
         passwordTxt = findViewById(R.id.password);
         loginBtn = findViewById(R.id.login_btn);
-        register = findViewById(R.id.btnregistra);
+        register = findViewById(R.id.registrationButton);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +52,8 @@ public class LoginActivity extends AppCompatActivity {
                 String password = passwordTxt.getText().toString();
                 if (!TextUtils.isEmpty(username.trim()) && !TextUtils.isEmpty(password.trim())) {
                     tryLogin(username, password);
+                } else {
+                    showMessage(R.string.missing_element);
                 }
             }
         });
@@ -71,8 +68,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-        builder.create();
-        builder.show();
+
+
     }
 
 

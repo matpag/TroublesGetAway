@@ -1,135 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.widget.ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <EditText
-        android:id="@+id/usrPlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/usrText"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
 
-    <TextView
-        android:id="@+id/usrText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="15dp"
-        android:fontFamily="@font/alike"
-        android:text="Username"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/usrPlain"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:hint="@string/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:inputType="none|textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/pswrdText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginEnd="15dp"
-        android:fontFamily="@font/alike"
-        android:text="Password"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/pswrdPlain"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:hint="@string/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:inputType="none|textPassword"
+            app:layout_constraintStart_toStartOf="@+id/usernameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/usernameEditText" />
 
-    <EditText
-        android:id="@+id/pswrdPlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pswrdText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pswrdText" />
+        <EditText
+            android:id="@+id/emailEditText"
+            android:hint="@string/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:inputType="none|textEmailAddress"
+            app:layout_constraintStart_toStartOf="@+id/phoneEditText"
+            app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
 
-    <EditText
-        android:id="@+id/mailPlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        android:text="e-Mail"
-        app:layout_constraintStart_toStartOf="@+id/telPlain"
-        app:layout_constraintTop_toBottomOf="@+id/telPlain" />
+        <EditText
+            android:id="@+id/nameEditText"
+            android:hint="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repeatPasswordEditText" />
 
-    <EditText
-        android:id="@+id/nomePlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        android:text="Nome"
-        app:layout_constraintStart_toStartOf="@+id/pswrdText"
-        app:layout_constraintTop_toBottomOf="@+id/pswrdPlain" />
+        <EditText
+            android:id="@+id/surnameEditText"
+            android:hint="@string/surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/nameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
-    <EditText
-        android:id="@+id/cognomePlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        android:text="Cognome"
-        app:layout_constraintStart_toStartOf="@+id/nomePlain"
-        app:layout_constraintTop_toBottomOf="@+id/nomePlain" />
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:hint="@string/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:inputType="none|number"
+            app:layout_constraintStart_toStartOf="@+id/surnameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/surnameEditText" />
 
-    <EditText
-        android:id="@+id/telPlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        android:text="Telefono"
-        app:layout_constraintStart_toStartOf="@+id/cognomePlain"
-        app:layout_constraintTop_toBottomOf="@+id/cognomePlain" />
+        <EditText
+            android:id="@+id/stateEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="142dp"
+            android:ems="10"
+            android:fontFamily="@font/alike"
+            android:hint="@string/state"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/emailEditText"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
-    <EditText
-        android:id="@+id/comunePlain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:fontFamily="@font/alike"
-        android:inputType="textPersonName"
-        android:text="Comune"
-        app:layout_constraintStart_toStartOf="@+id/mailPlain"
-        app:layout_constraintTop_toBottomOf="@+id/mailPlain" />
+        <Button
+            android:id="@+id/registrationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/colorButton"
+            android:fontFamily="@font/alike"
+            android:text="@string/register_button_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/surnameEditText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.505" />
 
-    <Button
-        android:id="@+id/btnregistra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/colorButton"
-        android:fontFamily="@font/alike"
-        android:text="Registrati"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <EditText
+            android:id="@+id/repeatPasswordEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/repeated_password"
+            android:inputType="none|textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+            app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.widget.ScrollView>
