@@ -21,9 +21,9 @@
         android:id="@+id/editInd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="55dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="54dp"
         android:ems="10"
         android:fontFamily="@font/alike"
         android:inputType="textPersonName"
@@ -31,98 +31,58 @@
         app:layout_constraintStart_toEndOf="@+id/textInd"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioAltro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="Altro"
-        app:layout_constraintStart_toStartOf="@+id/radioSemaforo"
-        app:layout_constraintTop_toBottomOf="@+id/radioSemaforo" />
-
-    <RadioButton
-        android:id="@+id/radioBuca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="Buca Asfalto"
-        app:layout_constraintBottom_toTopOf="@+id/radioLuce"
-        app:layout_constraintStart_toStartOf="@+id/radioLuce" />
-
-    <RadioButton
-        android:id="@+id/radioLuce"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:text="Lampione Spento"
-        app:layout_constraintBottom_toTopOf="@+id/radioSemaforo"
-        app:layout_constraintStart_toStartOf="@+id/radioSemaforo" />
-
-    <RadioButton
-        android:id="@+id/radioSemaforo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="205dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="204dp"
-        android:text="Semaforo Non Funzionante"
-        app:layout_constraintBottom_toTopOf="@+id/radioAlta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editInd" />
-
     <TextView
         android:id="@+id/textTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginTop="138dp"
         android:fontFamily="@font/alike"
         android:text="Tipo"
-        app:layout_constraintBottom_toBottomOf="@+id/radioBuca"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editInd" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textStima"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="85dp"
         android:fontFamily="@font/alike"
         android:text="Stima Pericolosità"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintTop_toBottomOf="@+id/radioTipo" />
 
-    <RadioButton
-        android:id="@+id/radioMedia"
+    <RadioGroup
+        android:id="@+id/radioStima"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="58dp"
-        android:text="Media"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="50dp"
         app:layout_constraintStart_toEndOf="@+id/textStima"
-        app:layout_constraintTop_toBottomOf="@+id/textStima" />
+        app:layout_constraintTop_toTopOf="@+id/textStima">
 
-    <RadioButton
-        android:id="@+id/radioAlta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="15dp"
-        android:text="Alta"
-        app:layout_constraintStart_toStartOf="@+id/radioMedia"
-        app:layout_constraintTop_toBottomOf="@+id/radioMedia" />
+        <RadioButton
+            android:id="@+id/radioMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Media" />
 
-    <RadioButton
-        android:id="@+id/radioBassa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:text="Bassa"
-        app:layout_constraintBottom_toTopOf="@+id/radioMedia"
-        app:layout_constraintStart_toStartOf="@+id/radioMedia" />
+        <RadioButton
+            android:id="@+id/radioAlta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Alta" />
+
+        <RadioButton
+            android:id="@+id/radioBassa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Bassa" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/bntinvia"
@@ -147,5 +107,45 @@
         android:text="Annulla"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInd">
+
+        <RadioButton
+            android:id="@+id/radioAltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="checkButton"
+            android:text="Altro" />
+
+        <RadioButton
+            android:id="@+id/radioBuca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Buca Asfalto" />
+
+        <RadioButton
+            android:id="@+id/radioLuce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Lampione Spento" />
+
+        <RadioButton
+            android:id="@+id/radioSemaforo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Semaforo Non Funzionante" />
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

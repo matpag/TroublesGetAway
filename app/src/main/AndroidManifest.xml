@@ -16,7 +16,6 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Admin.Comuni" />
         <activity android:name=".Admin.Utenti" />
-        <activity android:name=".Comune.Messaggi" />
         <activity android:name=".Comune.gestGuasti" />
         <activity android:name=".Utente.ProfiloUt" />
         <activity android:name=".Utente.GuastiUt" />

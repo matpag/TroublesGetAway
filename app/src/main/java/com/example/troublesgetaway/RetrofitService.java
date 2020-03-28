@@ -53,7 +53,7 @@ public class RetrofitService {
     }
 }
 
-interface MyApiService {
+public interface MyApiService {
 
     @FormUrlEncoded
     @POST("login.php")
@@ -63,4 +63,7 @@ interface MyApiService {
     @POST("inserisci_utente.php")
     Call<InserimentoUtenteResponse> insertUser(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("cognome") String cognome, @Field("email") String emailAddress, @Field("telefono") Integer phone, @Field("comune") String comune);
 
+    @FormUrlEncoded
+    @POST("insersci_guasto.php")
+    Call<InserimentoGuastoResponse> insertGuasto(@Field("luogo") String comune, @Field("tipo") int tipo, @Field("stima") int stima);
 }

@@ -21,8 +21,6 @@ import retrofit2.Response;
 enum RegistrationState {
     wrongPassword,
     correctData
-
-
 }
 
 

@@ -13,7 +13,6 @@ public class ComuneMainActivity extends AppCompatActivity {
 
     Button gestioneGuasti;
     Button listaGuasti;
-    Button messaggi;
     Button esci;
 
     @Override
@@ -23,7 +22,6 @@ public class ComuneMainActivity extends AppCompatActivity {
 
         gestioneGuasti = findViewById(R.id.btngestione);
         listaGuasti = findViewById(R.id.btnguasti);
-        messaggi = findViewById(R.id.btnmsg);
         esci = findViewById(R.id.btnannulla);
 
         gestioneGuasti.setOnClickListener(new View.OnClickListener() {
@@ -42,16 +40,7 @@ public class ComuneMainActivity extends AppCompatActivity {
             }
         });
 
-        messaggi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent msg = new Intent(ComuneMainActivity.this, Messaggi.class);
-                startActivity(msg);
+
             }
-        });
-
-
-
-    }
 
 }
