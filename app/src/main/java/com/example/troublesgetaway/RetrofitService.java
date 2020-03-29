@@ -66,4 +66,8 @@ public interface MyApiService {
     @FormUrlEncoded
     @POST("insersci_guasto.php")
     Call<InserimentoGuastoResponse> insertGuasto(@Field("luogo") String comune, @Field("tipo") int tipo, @Field("stima") int stima);
+
+    @FormUrlEncoded
+    @POST("inserisci_comune.php")
+    Call<InserimentoComuneResponde> insertComune(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("email") String emailAddress, @Field("telefono") Integer phone);
 }
