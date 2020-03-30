@@ -15,6 +15,8 @@ import com.example.troublesgetaway.comune.ComuneMainActivity;
 import com.example.troublesgetaway.utente.UtenteMainActivity;
 import com.example.troublesgetaway.data.model.LoginResponse;
 
+import org.jetbrains.annotations.NotNull;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -77,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         MyApiService apiService = RetrofitService.getInstance();
         apiService.login(username, password).enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+            public void onResponse(@NotNull Call<LoginResponse> call, @NotNull Response<LoginResponse> response) {
                 //risposta affermativa
                 if (response.isSuccessful()) {
                     LoginResponse resp = response.body();
@@ -109,7 +111,8 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
+            public void onFailure(@NotNull Call<LoginResponse> call, @NotNull Throwable t) {
+                t.printStackTrace();
                 showMessage(R.string.Connection_Error);
             }
         });
