@@ -3,6 +3,7 @@ package com.example.troublesgetaway;
 import android.content.Context;
 import android.support.v4.widget.ContentLoadingProgressBar;
 
+import com.example.troublesgetaway.data.model.InserimentoComuneResponse;
 import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
 import com.example.troublesgetaway.data.model.LoginResponse;
 
@@ -69,5 +70,5 @@ public interface MyApiService {
 
     @FormUrlEncoded
     @POST("inserisci_comune.php")
-    Call<InserimentoComuneResponde> insertComune(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("email") String emailAddress, @Field("telefono") Integer phone);
+    Call<InserimentoComuneResponse> insertComune(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("email") String emailAddress, @Field("telefono") Integer phone);
 }
