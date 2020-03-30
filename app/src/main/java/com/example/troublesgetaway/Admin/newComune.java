@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.troublesgetaway.LoginActivity;
-import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
 import com.example.troublesgetaway.RegisterActivity;
 import com.example.troublesgetaway.RetrofitService;
@@ -108,7 +107,7 @@ public class newComune extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(usrnm) && !TextUtils.isEmpty(pswrd) && !TextUtils.isEmpty(name) && !TextUtils.isEmpty(tel) && !TextUtils.isEmpty(mail)
                 ) {
-                    tryInsert(usrnm, pswrd, name, tel, mail);
+                    //tryInsert(usrnm, pswrd, name, tel, mail);
                 } else{
                     showMessage(R.string.missing_element);
                 }

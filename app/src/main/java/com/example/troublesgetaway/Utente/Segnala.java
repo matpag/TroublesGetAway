@@ -18,6 +18,7 @@ import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
 import com.example.troublesgetaway.RegisterActivity;
 import com.example.troublesgetaway.RetrofitService;
+import com.example.troublesgetaway.data.model.InserimentoGuastoResponse;
 import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
 
 import retrofit2.Call;
@@ -102,6 +103,7 @@ public class Segnala extends AppCompatActivity {
                 radioButton1 = findViewById(radioInt);
                 if (!TextUtils.isEmpty(luogo)
                 ) {
+
                     trySegn(luogo, radioId, radioInt);
                 } else{
                     showMessage(R.string.missing_element);
@@ -125,36 +127,27 @@ public class Segnala extends AppCompatActivity {
         radioButton1 = findViewById(radioInt);
     }
 
-};
-/*
-    public void trySegn(String luogo, int radioId, int radioInt) {
-        MyApiService apiService = RetrofitService.getInstance();
 
+    public void trySegn(String luogo, int radioId, int radioInt){
+        MyApiService apiService=RetrofitService.getInstance();
         apiService.insertGuasto(luogo, radioId, radioInt).enqueue(new Callback<InserimentoGuastoResponse>() {
-         @Override
-        public void onResponse(Call<InserimentoGuastoResponse> call, Response<InserimentoGuastoResponse> response) {
-        if (response.isSuccessful()) {
-        InserimentoGuastoResponse resp = response.body();
-        if (resp.success) {
-        segnSuccessfulDialog();
-        } else {
-        if (!resp.error.isEmpty()){
-        showCustomMessage(resp.error);
-        } else {
-        showMessage(R.string.Connection_Error);
-        }
-        }
+            @Override
+            public void onResponse(Call<InserimentoGuastoResponse> call, Response<InserimentoGuastoResponse> response) {
+                if (response.isSuccessful()) {
+                    InserimentoGuastoResponse resp = response.body();
+                    if (resp.success) {
+                        showCustomMessage("messaggio per guasto inserito correttamente");
+                    }
+                }
+            }
 
-        } else {
-        showCustomMessage(response.errorBody().toString());
-        }
-        }
+            @Override
+            public void onFailure(Call<InserimentoGuastoResponse> call, Throwable t) {
 
-@Override
-public void onFailure(Call<InserimentoguastoResponse> call, Throwable t) {
-        showCustomMessage(t.getMessage());
-        }
+            }
         });
-        }
+
     }
-*/
+};
+
+
