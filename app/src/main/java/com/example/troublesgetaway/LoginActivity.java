@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.troublesgetaway.Admin.AdminMainActivity;
-import com.example.troublesgetaway.Comune.ComuneMainActivity;
-import com.example.troublesgetaway.Utente.UtenteMainActivity;
+import com.example.troublesgetaway.admin.AdminMainActivity;
+import com.example.troublesgetaway.comune.ComuneMainActivity;
+import com.example.troublesgetaway.utente.UtenteMainActivity;
 import com.example.troublesgetaway.data.model.LoginResponse;
 
 import retrofit2.Call;

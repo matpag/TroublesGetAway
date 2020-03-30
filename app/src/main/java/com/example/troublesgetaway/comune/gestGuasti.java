@@ -1,4 +1,4 @@
-package com.example.troublesgetaway.Comune;
+package com.example.troublesgetaway.comune;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

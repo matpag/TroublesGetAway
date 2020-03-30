@@ -1,4 +1,4 @@
-package com.example.troublesgetaway.Admin;
+package com.example.troublesgetaway.admin;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,9 +1,8 @@
-package com.example.troublesgetaway.Admin;
+package com.example.troublesgetaway.admin;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.strictmode.WebViewMethodCalledOnWrongThreadViolation;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,15 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.troublesgetaway.LoginActivity;
 import com.example.troublesgetaway.R;
-import com.example.troublesgetaway.RegisterActivity;
-import com.example.troublesgetaway.RetrofitService;
-import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 enum RegistrationState {
     wrongPassword,

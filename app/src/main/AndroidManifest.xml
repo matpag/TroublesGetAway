@@ -12,25 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Admin.newComune"/>
+        <activity android:name=".admin.newComune"/>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".Admin.Comuni" />
-        <activity android:name=".Admin.Utenti" />
-        <activity android:name=".Comune.gestGuasti" />
-        <activity android:name=".Utente.ProfiloUt" />
-        <activity android:name=".Utente.GuastiUt" />
-        <activity android:name=".Utente.Segnala" />
-        <activity android:name=".Utente.Guasti" />
+        <activity android:name=".admin.Comuni" />
+        <activity android:name=".admin.Utenti" />
+        <activity android:name=".comune.gestGuasti" />
+        <activity android:name=".utente.ProfiloUt" />
+        <activity android:name=".utente.GuastiUt" />
+        <activity android:name=".utente.Segnala" />
+        <activity android:name=".utente.Guasti" />
         <activity
-            android:name=".Utente.UtenteMainActivity"
+            android:name=".utente.UtenteMainActivity"
             android:label="@string/title_activity_utente_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Comune.ComuneMainActivity"
+            android:name=".comune.ComuneMainActivity"
             android:label="@string/title_activity_comune_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Admin.AdminMainActivity"
+            android:name=".admin.AdminMainActivity"
             android:label="@string/title_activity_admin_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

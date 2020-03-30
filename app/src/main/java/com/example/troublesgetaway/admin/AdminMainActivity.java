@@ -1,4 +1,4 @@
-package com.example.troublesgetaway.Admin;
+package com.example.troublesgetaway.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.troublesgetaway.R;
-import com.example.troublesgetaway.Utente.Guasti;
+import com.example.troublesgetaway.utente.Guasti;
 
 public class AdminMainActivity extends AppCompatActivity {
 

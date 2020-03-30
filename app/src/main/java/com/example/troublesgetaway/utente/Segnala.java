@@ -1,4 +1,4 @@
-package com.example.troublesgetaway.Utente;
+package com.example.troublesgetaway.utente;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,13 +13,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.example.troublesgetaway.LoginActivity;
 import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
-import com.example.troublesgetaway.RegisterActivity;
 import com.example.troublesgetaway.RetrofitService;
 import com.example.troublesgetaway.data.model.InserimentoGuastoResponse;
-import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;

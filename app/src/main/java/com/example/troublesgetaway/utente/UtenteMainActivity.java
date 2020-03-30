@@ -1,4 +1,4 @@
-package com.example.troublesgetaway.Utente;
+package com.example.troublesgetaway.utente;
 
 import android.content.Intent;
 import android.os.Bundle;
