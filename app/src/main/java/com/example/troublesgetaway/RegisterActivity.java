@@ -12,8 +12,6 @@ import android.widget.EditText;
 
 import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
 
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -121,7 +119,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void tryRegistration(String username, String password, String name, String surname, String phone, String email, String state) {
         MyApiService apiService = RetrofitService.getInstance();
 
-        apiService.insertUser(username, password, name, surname,email, Integer.valueOf(phone), state).enqueue(new Callback<InserimentoUtenteResponse>() {
+        apiService.insertUser(username, password, name, Integer.valueOf(phone), state).enqueue(new Callback<InserimentoUtenteResponse>() {
             @Override
             public void onResponse(Call<InserimentoUtenteResponse> call, Response<InserimentoUtenteResponse> response) {
                 if (response.isSuccessful()) {

@@ -3,15 +3,23 @@ package com.example.troublesgetaway.admin;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
+import com.example.troublesgetaway.RetrofitService;
+//import com.example.troublesgetaway.data.model.InserimentoComuneResponse;
+import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 enum RegistrationState {
     wrongPassword,
@@ -20,9 +28,8 @@ enum RegistrationState {
 
 public class newComune extends AppCompatActivity {
 
-    TextView textname, textpass, textusrnm, textemail, texttel;
     EditText nome, password, username, email, telefono;
-    Button annulla, inserisci;
+    Button inserisci;
 
     private void showMessage(int text) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -53,7 +60,7 @@ public class newComune extends AppCompatActivity {
 
     }
 
-    private void insertionSuccessfulDialog(){
+    private void insertionSuccessfulDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.registration_successful)
                 //      .setTitle(R.string.Successful)
@@ -74,12 +81,6 @@ public class newComune extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_comune);
 
-        textname = findViewById(R.id.text);
-        textusrnm = findViewById(R.id.textUsrnm);
-        textpass = findViewById(R.id.textPswrd);
-        textemail = findViewById(R.id.textEmail);
-        texttel = findViewById(R.id.textTel);
-        annulla = findViewById(R.id.btncancel);
         inserisci = findViewById(R.id.btnInsert);
         nome = findViewById(R.id.editNome);
         password = findViewById(R.id.editPswrd);
@@ -98,34 +99,28 @@ public class newComune extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(usrnm) && !TextUtils.isEmpty(pswrd) && !TextUtils.isEmpty(name) && !TextUtils.isEmpty(tel) && !TextUtils.isEmpty(mail)
                 ) {
-                    //tryInsert(usrnm, pswrd, name, tel, mail);
-                } else{
+                    tryInsert(usrnm, pswrd, name, tel, mail);
+                } else {
                     showMessage(R.string.missing_element);
                 }
             }
         });
 
-        annulla.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent cancel = new Intent(newComune.this, Comuni.class);
-                startActivity(cancel);
-            }
-        });
+
     }
-/*
-    public void tryInsert(String username, String password, String nome, int telefono, String email) {
+
+    public void tryInsert(String username, String password, String nome, String telefono, String email) {
         MyApiService apiService = RetrofitService.getInstance();
 
-        apiService.insertUser(username, password, nome, email, Integer.valueOf(telefono)).enqueue(new Callback<InserimentoComuneResponse>() {
+        apiService.insertUser(username, password, nome, Integer.valueOf(telefono), email).enqueue(new Callback<InserimentoUtenteResponse>() {
             @Override
-            public void onResponse(Call<InserimentoUtenteResponse> call, Response<InserimentoComuneResponse> response) {
+            public void onResponse(Call<InserimentoUtenteResponse> call, Response<InserimentoUtenteResponse> response) {
                 if (response.isSuccessful()) {
-                    InserimentoComuneResponse resp = response.body();
+                    InserimentoUtenteResponse resp = response.body();
                     if (resp.success) {
-                        registrationSuccessfulDialog();
+                        insertionSuccessfulDialog();
                     } else {
-                        if (!resp.error.isEmpty()){
+                        if (!resp.error.isEmpty()) {
                             showCustomMessage(resp.error);
                         } else {
                             showMessage(R.string.Connection_Error);
@@ -138,9 +133,10 @@ public class newComune extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<InserimentoComuneResponse> call, Throwable t) {
+            public void onFailure(Call<InserimentoUtenteResponse> call, Throwable t) {
                 showCustomMessage(t.getMessage());
             }
         });
-    } */
+
+    }
 }

@@ -18,7 +18,7 @@ public interface MyApiService {
 
     @FormUrlEncoded
     @POST("inserisci_utente.php")
-    Call<InserimentoUtenteResponse> insertUser(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("cognome") String cognome, @Field("email") String emailAddress, @Field("telefono") Integer phone, @Field("comune") String comune);
+    Call<InserimentoUtenteResponse> insertUser(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("telefono") Integer phone, @Field("comune") String comune);
 
     @FormUrlEncoded
     @POST("inserisci_guasto.php")
