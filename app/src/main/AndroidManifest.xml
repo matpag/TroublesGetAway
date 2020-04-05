@@ -17,7 +17,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".admin.Comuni" />
         <activity android:name=".admin.Utenti" />
-        <activity android:name=".comune.gestGuasti" />
+        <activity android:name=".comune.gestioneGuasti" />
         <activity android:name=".utente.ProfiloUt" />
         <activity android:name=".utente.GuastiUt" />
         <activity android:name=".utente.Segnala" />

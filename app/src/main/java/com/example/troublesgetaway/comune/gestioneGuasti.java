@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.troublesgetaway.R;
 
-public class gestGuasti extends AppCompatActivity {
+public class gestioneGuasti extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

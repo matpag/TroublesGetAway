@@ -18,13 +18,13 @@ public interface MyApiService {
 
     @FormUrlEncoded
     @POST("inserisci_utente.php")
-    Call<InserimentoUtenteResponse> insertUser(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("telefono") Integer phone, @Field("comune") String comune);
+    Call<InserimentoUtenteResponse> inserisciUtente(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("cognome") String cognome, @Field("email") String email, @Field("telefono") Integer phone, @Field("comune") String comune);
 
     @FormUrlEncoded
     @POST("inserisci_guasto.php")
-    Call<InserimentoGuastoResponse> insertGuasto(@Field("luogo") String comune, @Field("tipo") int tipo, @Field("stima") int stima);
+    Call<InserimentoGuastoResponse> inserisciGuasto(@Field("luogo") String comune, @Field("tipo") int tipo, @Field("stima") int stima);
 
     @FormUrlEncoded
     @POST("inserisci_comune.php")
-    Call<InserimentoComuneResponse> insertComune(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("email") String emailAddress, @Field("telefono") Integer phone);
+    Call<InserimentoComuneResponse> inserisciComune(@Field("user") String username, @Field("password") String password, @Field("nome") String nome, @Field("email") String emailAddress, @Field("telefono") Integer phone, @Field("tipoUtente") Integer tipoUtente);
 }

@@ -127,7 +127,7 @@ public class Segnala extends AppCompatActivity {
 
     public void trySegn(String luogo, int radioId, int radioInt){
         MyApiService apiService=RetrofitService.getInstance();
-        apiService.insertGuasto(luogo, radioId, radioInt).enqueue(new Callback<InserimentoGuastoResponse>() {
+        apiService.inserisciGuasto(luogo, radioId, radioInt).enqueue(new Callback<InserimentoGuastoResponse>() {
             @Override
             public void onResponse(Call<InserimentoGuastoResponse> call, Response<InserimentoGuastoResponse> response) {
                 if (response.isSuccessful()) {

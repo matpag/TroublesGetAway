@@ -9,22 +9,15 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
 import com.example.troublesgetaway.RetrofitService;
-//import com.example.troublesgetaway.data.model.InserimentoComuneResponse;
-import com.example.troublesgetaway.data.model.InserimentoUtenteResponse;
+import com.example.troublesgetaway.data.model.InserimentoComuneResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-enum RegistrationState {
-    wrongPassword,
-    correctData
-}
 
 public class newComune extends AppCompatActivity {
 
@@ -34,7 +27,6 @@ public class newComune extends AppCompatActivity {
     private void showMessage(int text) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(text)
-                //.setTitle(R.string.Error)
                 .setPositiveButton(R.string.OK_Button_Text, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -48,7 +40,6 @@ public class newComune extends AppCompatActivity {
     private void showCustomMessage(String text) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(text)
-                //.setTitle(R.string.Error)
                 .setPositiveButton(R.string.OK_Button_Text, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -60,10 +51,9 @@ public class newComune extends AppCompatActivity {
 
     }
 
-    private void insertionSuccessfulDialog() {
+    private void insertionSuccessfullDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.registration_successful)
-                //      .setTitle(R.string.Successful)
                 .setPositiveButton(R.string.OK_Button_Text, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -83,10 +73,10 @@ public class newComune extends AppCompatActivity {
 
         inserisci = findViewById(R.id.btnInsert);
         nome = findViewById(R.id.editNome);
-        password = findViewById(R.id.editPswrd);
-        username = findViewById(R.id.editUsrnm);
+        password = findViewById(R.id.passwordEditText);
+        username = findViewById(R.id.usernameEditText);
         telefono = findViewById(R.id.editTel);
-        email = findViewById(R.id.editEmail);
+        email = findViewById(R.id.emailEditText);
 
         inserisci.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,13 +102,14 @@ public class newComune extends AppCompatActivity {
     public void tryInsert(String username, String password, String nome, String telefono, String email) {
         MyApiService apiService = RetrofitService.getInstance();
 
-        apiService.insertUser(username, password, nome, Integer.valueOf(telefono), email).enqueue(new Callback<InserimentoUtenteResponse>() {
+        apiService.inserisciComune(username, password, nome, email, Integer.valueOf(telefono), 1 ).enqueue(new Callback<InserimentoComuneResponse>() {
             @Override
-            public void onResponse(Call<InserimentoUtenteResponse> call, Response<InserimentoUtenteResponse> response) {
+            public void onResponse(Call<InserimentoComuneResponse> call, Response<InserimentoComuneResponse> response) {
                 if (response.isSuccessful()) {
-                    InserimentoUtenteResponse resp = response.body();
+                    InserimentoComuneResponse resp = response.body();
+
                     if (resp.success) {
-                        insertionSuccessfulDialog();
+                        insertionSuccessfullDialog();
                     } else {
                         if (!resp.error.isEmpty()) {
                             showCustomMessage(resp.error);
@@ -133,7 +124,7 @@ public class newComune extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<InserimentoUtenteResponse> call, Throwable t) {
+            public void onFailure(Call<InserimentoComuneResponse> call, Throwable t) {
                 showCustomMessage(t.getMessage());
             }
         });

@@ -27,7 +27,7 @@ public class ComuneMainActivity extends AppCompatActivity {
         gestioneGuasti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gestGuasti = new Intent(ComuneMainActivity.this, gestGuasti.class);
+                Intent gestGuasti = new Intent(ComuneMainActivity.this, com.example.troublesgetaway.comune.gestioneGuasti.class);
                 startActivity(gestGuasti);
             }
         });
