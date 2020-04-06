@@ -20,7 +20,7 @@
         <activity android:name=".comune.gestioneGuasti" />
         <activity android:name=".utente.ProfiloUt" />
         <activity android:name=".utente.GuastiUt" />
-        <activity android:name=".utente.Segnala" />
+        <activity android:name=".utente.Signal" />
         <activity android:name=".utente.Guasti" />
         <activity
             android:name=".utente.UtenteMainActivity"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".utente.Segnala">
+    tools:context=".utente.Signal">
 
     <TextView
         android:id="@+id/textInd"
@@ -63,21 +63,21 @@
         app:layout_constraintTop_toTopOf="@+id/textStima">
 
         <RadioButton
-            android:id="@+id/radioMedia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkButton"
-            android:text="Media" />
-
-        <RadioButton
-            android:id="@+id/radioAlta"
+            android:id="@+id/s3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:text="Alta" />
 
         <RadioButton
-            android:id="@+id/radioBassa"
+            android:id="@+id/s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Media" />
+
+        <RadioButton
+            android:id="@+id/s1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
@@ -88,23 +88,12 @@
         android:id="@+id/bntinvia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="46dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
         android:text="Invia"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnannulla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="89dp"
-        android:fontFamily="@font/alike"
-        android:text="Annulla"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -119,29 +108,28 @@
         app:layout_constraintTop_toBottomOf="@+id/editInd">
 
         <RadioButton
-            android:id="@+id/radioAltro"
+            android:id="@+id/t0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:onClick="checkButton"
             android:text="Altro" />
 
         <RadioButton
-            android:id="@+id/radioBuca"
+            android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:text="Buca Asfalto" />
 
         <RadioButton
-            android:id="@+id/radioLuce"
+            android:id="@+id/t2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:text="Lampione Spento" />
 
         <RadioButton
-            android:id="@+id/radioSemaforo"
+            android:id="@+id/t3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"

@@ -22,13 +22,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Segnala extends AppCompatActivity {
+public class Signal extends AppCompatActivity {
 
     TextView textIndrizzo, tipo, stima;
     EditText indirizzo;
     RadioGroup tipoGroup, stimaGroup;
     RadioButton radioButton, radioButton1;
-    Button invia, annulla;
+    Button invia;
 
     private void showMessage(int text) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -36,7 +36,21 @@ public class Segnala extends AppCompatActivity {
                 .setPositiveButton(R.string.OK_Button_Text, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 
+    private void signalSuccesfulDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("guasto segnalato con successo")
+                .setPositiveButton(R.string.OK_Button_Text, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent segnal = new Intent(Signal.this, GuastiUt.class);
+                        startActivity(segnal);
+                        finish();
                     }
                 });
         AlertDialog dialog = builder.create();
@@ -58,21 +72,6 @@ public class Segnala extends AppCompatActivity {
 
     }
 
-    private void insertgSuccessfulDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.registration_successful)
-                .setPositiveButton(R.string.OK_Button_Text, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent insertg = new Intent(Segnala.this, GuastiUt.class);
-                        startActivity(insertg);
-                        finish();
-                    }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +84,6 @@ public class Segnala extends AppCompatActivity {
         tipoGroup = findViewById(R.id.radioTipo);
         stimaGroup = findViewById(R.id.radioStima);
         invia = findViewById(R.id.bntinvia);
-        annulla = findViewById(R.id.btnannulla);
 
 
         invia.setOnClickListener(new View.OnClickListener() {
@@ -93,9 +91,7 @@ public class Segnala extends AppCompatActivity {
             public void onClick(View v) {
                 String luogo = indirizzo.getText().toString().trim();
                 int radioId = tipoGroup.getCheckedRadioButtonId();
-               // radioId = tipo.;
                 int radioInt = stimaGroup.getCheckedRadioButtonId();
-                // radioInt = stima.;
                 radioButton = findViewById(radioId);
                 radioButton1 = findViewById(radioInt);
                 if (!TextUtils.isEmpty(luogo)
@@ -105,15 +101,6 @@ public class Segnala extends AppCompatActivity {
                 } else{
                     showMessage(R.string.missing_element);
                 }
-
-            }
-        });
-
-        annulla.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent annulla = new Intent(Segnala.this, UtenteMainActivity.class);
-                startActivity(annulla);
             }
         });
     }
@@ -133,10 +120,19 @@ public class Segnala extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     InserimentoGuastoResponse resp = response.body();
                     if (resp.success) {
-                        showCustomMessage("messaggio per guasto inserito correttamente");
+                        signalSuccesfulDialog();
+                    }
+                    else {
+                        if (!resp.error.isEmpty()){
+                            showCustomMessage(resp.error);
+                        } else {
+                            showMessage(R.string.Connection_Error);
+                        }
+                    }
+                     }   else {
+                    showCustomMessage(response.errorBody().toString());
                     }
                 }
-            }
 
             @Override
             public void onFailure(Call<InserimentoGuastoResponse> call, Throwable t) {

@@ -38,7 +38,7 @@ public class UtenteMainActivity extends AppCompatActivity {
         segnalaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent segnala = new Intent(UtenteMainActivity.this, Segnala.class);
+                Intent segnala = new Intent(UtenteMainActivity.this, Signal.class);
                 startActivity(segnala);
                     }
                 });
