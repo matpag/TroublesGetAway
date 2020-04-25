@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
@@ -29,6 +30,8 @@ public class Signal extends AppCompatActivity {
     RadioGroup tipoGroup, stimaGroup;
     RadioButton radioButton, radioButton1;
     Button invia;
+    String firstRadioButtonGroupChoice, secondRadioButtonGroupChoice;
+    Integer firstChoiceInt, secondChoiceInt;
 
     private void showMessage(int text) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -94,10 +97,43 @@ public class Signal extends AppCompatActivity {
                 int radioInt = stimaGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
                 radioButton1 = findViewById(radioInt);
+                firstRadioButtonGroupChoice = (String) radioButton.getText();
+                secondRadioButtonGroupChoice = (String) radioButton1.getText();
+
+
+                switch (firstRadioButtonGroupChoice){
+                    case "Altro":
+                        firstChoiceInt = 0;
+                        break;
+                    case "Buca Asfalto":
+                        firstChoiceInt = 1;
+                        break;
+                    case "Lampione Spento":
+                        firstChoiceInt = 2;
+                        break;
+                    case "Semaforo Non Funzionante":
+                        firstChoiceInt = 3;
+                        break;
+                }
+
+                switch (secondRadioButtonGroupChoice){
+                    case "Bassa":
+                        secondChoiceInt = 0;
+                        break;
+                    case "Media":
+                        secondChoiceInt = 1;
+                        break;
+                    case "Alta":
+                        secondChoiceInt = 2;
+                        break;
+                }
+
+
+
                 if (!TextUtils.isEmpty(luogo)
                 ) {
 
-                    trySegn(luogo, radioId, radioInt);
+                    trySegn(luogo, firstChoiceInt, secondChoiceInt);
                 } else{
                     showMessage(R.string.missing_element);
                 }
