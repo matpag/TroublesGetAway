@@ -20,7 +20,7 @@
     <string name="surname">Surname</string>
     <string name="phone">Phone</string>
     <string name="email">E-mail</string>
-    <string name="state">State</string>
+    <string name="state">City</string>
     <string name="register_button_label">REGISTER</string>
 
     <string name="missing_element">Missing data!</string>
@@ -28,4 +28,15 @@
     <string name="already_existing_user">User already registered!Please choose another username.</string>
     <string name="registration_successful">User successfully registered! Proceed with the login.</string>
 
+    <string name="other_radio">Other</string>
+    <string name="hole_radio">Pothole</string>
+    <string name="lamp_radio">Broken Lamp</string>
+    <string name="trafficl_radio">Broken Traffic Lights</string>
+    <string name="address">Address</string>
+    <string name="type">Type</string>
+    <string name="hazard">Hazard Estimation</string>
+    <string name="high_radio">High</string>
+    <string name="medium_radio">Medium</string>
+    <string name="low_radio">Low</string>
+    <string name="send_button">Send</string>
 </resources>

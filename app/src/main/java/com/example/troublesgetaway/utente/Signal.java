@@ -132,8 +132,12 @@ public class Signal extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(luogo)
                 ) {
+<<<<<<< HEAD
 
                     trySegn(luogo, firstChoiceInt, secondChoiceInt);
+=======
+                    trySegn(luogo, radioId, radioInt);
+>>>>>>> localizzazione
                 } else{
                     showMessage(R.string.missing_element);
                 }

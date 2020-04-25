@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="68dp"
         android:fontFamily="@font/alike"
-        android:text="Indirizzo"
+        android:text="@string/address"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,7 +38,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="138dp"
         android:fontFamily="@font/alike"
-        android:text="Tipo"
+        android:text="@string/type"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,7 +49,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="85dp"
         android:fontFamily="@font/alike"
-        android:text="Stima Pericolosità"
+        android:text="@string/hazard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioTipo" />
 
@@ -67,21 +67,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Alta" />
+            android:text="@string/high_radio" />
 
         <RadioButton
             android:id="@+id/s2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Media" />
+            android:text="@string/medium_radio" />
 
         <RadioButton
             android:id="@+id/s1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Bassa" />
+            android:text="@string/low_radio" />
     </RadioGroup>
 
     <Button
@@ -92,7 +92,7 @@
         android:layout_marginBottom="46dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
-        android:text="Invia"
+        android:text="@string/send_button"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -112,28 +112,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Altro" />
+            android:text="@string/other_radio" />
 
         <RadioButton
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Buca Asfalto" />
+            android:text="@string/hole_radio" />
 
         <RadioButton
             android:id="@+id/t2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Lampione Spento" />
+            android:text="@string/lamp_radio" />
 
         <RadioButton
             android:id="@+id/t3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Semaforo Non Funzionante" />
+            android:text="@string/trafficl_radio" />
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

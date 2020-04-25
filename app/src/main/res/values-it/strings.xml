@@ -28,4 +28,16 @@
     <string name="not_same_password_message">Password non coincidenti!</string>
     <string name="already_existing_user">Utente già presente nel database!Scegliere un altro username.</string>
     <string name="registration_successful">Utente registrato correttamente!</string>
+
+    <string name="other_radio">Altro</string>
+    <string name="hole_radio">Buca Stradale</string>
+    <string name="lamp_radio">Luce Non Funzionante</string>
+    <string name="trafficl_radio">Semaforo Spento</string>
+    <string name="address">Indirizzo</string>
+    <string name="type">Tipo</string>
+    <string name="hazard">Stima Pericolosità</string>
+    <string name="high_radio">Alta</string>
+    <string name="medium_radio">Media</string>
+    <string name="low_radio">Bassa</string>
+    <string name="send_button">Invia</string>
 </resources>
