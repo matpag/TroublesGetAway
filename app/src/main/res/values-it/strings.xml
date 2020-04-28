@@ -40,4 +40,13 @@
     <string name="medium_radio">Media</string>
     <string name="low_radio">Bassa</string>
     <string name="send_button">Invia</string>
+
+    <string name="register_button">Registrati</string>
+    <string name="list_breakdowns">Lista Guasti</string>
+    <string name="user_button">Gestione Utenti</string>
+    <string name="state_button">Gestione Comuni</string>
+    <string name="signal">Segnale</string>
+    <string name="my_breakdowns">I Miei Guasti</string>
+    <string name="profile">Profilo</string>
+    <string name="exit">Esci</string>
 </resources>

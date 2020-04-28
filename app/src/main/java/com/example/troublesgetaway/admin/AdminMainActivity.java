@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.troublesgetaway.LoginActivity;
 import com.example.troublesgetaway.R;
 import com.example.troublesgetaway.utente.Guasti;
 
@@ -51,6 +52,13 @@ public class AdminMainActivity extends AppCompatActivity {
             }
         });
 
+        esci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exit = new Intent(AdminMainActivity.this, LoginActivity.class);
+                startActivity(exit);
+            }
+        });
 
     }
 }

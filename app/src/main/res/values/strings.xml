@@ -39,4 +39,13 @@
     <string name="medium_radio">Medium</string>
     <string name="low_radio">Low</string>
     <string name="send_button">Send</string>
+
+    <string name="register_button">Register</string>
+    <string name="list_breakdowns">Breakdowns List</string>
+    <string name="user_button">User Management</string>
+    <string name="state_button">State Management</string>
+    <string name="signal">Signal</string>
+    <string name="my_breakdowns">My Breakdowns List</string>
+    <string name="profile">My Profile</string>
+    <string name="exit">Exit</string>
 </resources>

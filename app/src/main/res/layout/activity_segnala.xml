@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="true"
     tools:context=".utente.Signal">
 
     <TextView
@@ -14,6 +15,8 @@
         android:layout_marginTop="68dp"
         android:fontFamily="@font/alike"
         android:text="@string/address"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +42,8 @@
         android:layout_marginTop="138dp"
         android:fontFamily="@font/alike"
         android:text="@string/type"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,6 +55,8 @@
         android:layout_marginTop="85dp"
         android:fontFamily="@font/alike"
         android:text="@string/hazard"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioTipo" />
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sfondomain"
     tools:context=".LoginActivity">
 
     <TextView
@@ -14,13 +15,13 @@
         android:layout_marginTop="93dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="70dp"
-        android:background="?attr/colorControlHighlight"
         android:editable="false"
         android:fontFamily="@font/alike"
         android:text="@string/welcome_to_troubles_get_away"
         android:textAlignment="center"
-        android:textColor="#8aacc8"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +74,7 @@
         android:layout_marginBottom="85dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
-        android:text="Registrati"
+        android:text="@string/register_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/login_btn"

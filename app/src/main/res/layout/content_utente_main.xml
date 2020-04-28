@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sfondouser"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".utente.UtenteMainActivity"
     tools:showIn="@layout/activity_utente_main">
@@ -15,7 +16,7 @@
         android:layout_marginTop="83dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
-        android:text="Lista Guasti"
+        android:text="@string/list_breakdowns"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +28,7 @@
         android:layout_marginTop="51dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
-        android:text="Segnala"
+        android:text="@string/signal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnlistaguasti" />
@@ -39,7 +40,7 @@
         android:layout_marginBottom="59dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
-        android:text="I Miei Guasti"
+        android:text="@string/my_breakdowns"
         app:layout_constraintBottom_toTopOf="@+id/btnprofilo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -51,7 +52,7 @@
         android:layout_marginBottom="225dp"
         android:backgroundTint="@color/colorButton"
         android:fontFamily="@font/alike"
-        android:text="Il Mio Profilo"
+        android:text="@string/profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -70,7 +71,7 @@
         android:layout_marginStart="57dp"
         android:layout_marginBottom="98dp"
         android:fontFamily="@font/alike"
-        android:text="Esci"
+        android:text="@string/exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

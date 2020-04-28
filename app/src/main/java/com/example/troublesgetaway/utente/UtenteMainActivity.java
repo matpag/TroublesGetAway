@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.troublesgetaway.LoginActivity;
 import com.example.troublesgetaway.R;
 
 public class UtenteMainActivity extends AppCompatActivity {
@@ -58,6 +59,14 @@ public class UtenteMainActivity extends AppCompatActivity {
                 startActivity(profilo);
                     }
                 });
+
+        esci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exit = new Intent(UtenteMainActivity.this, LoginActivity.class);
+                startActivity(exit);
+            }
+        });
 
     }
 

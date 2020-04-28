@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.troublesgetaway.MyApiService;
 import com.example.troublesgetaway.R;
@@ -102,28 +101,28 @@ public class Signal extends AppCompatActivity {
 
 
                 switch (firstRadioButtonGroupChoice){
-                    case "Altro":
+                    case "other_radio":
                         firstChoiceInt = 0;
                         break;
-                    case "Buca Asfalto":
+                    case "hole_radio":
                         firstChoiceInt = 1;
                         break;
-                    case "Lampione Spento":
+                    case "lamp_radio":
                         firstChoiceInt = 2;
                         break;
-                    case "Semaforo Non Funzionante":
+                    case "trafficl_radio":
                         firstChoiceInt = 3;
                         break;
                 }
 
                 switch (secondRadioButtonGroupChoice){
-                    case "Bassa":
+                    case "low_radio":
                         secondChoiceInt = 0;
                         break;
-                    case "Media":
+                    case "medium_radio":
                         secondChoiceInt = 1;
                         break;
-                    case "Alta":
+                    case "high_radio":
                         secondChoiceInt = 2;
                         break;
                 }
@@ -132,12 +131,10 @@ public class Signal extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(luogo)
                 ) {
-<<<<<<< HEAD
 
                     trySegn(luogo, firstChoiceInt, secondChoiceInt);
-=======
                     trySegn(luogo, radioId, radioInt);
->>>>>>> localizzazione
+
                 } else{
                     showMessage(R.string.missing_element);
                 }

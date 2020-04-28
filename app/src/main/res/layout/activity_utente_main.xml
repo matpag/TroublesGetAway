@@ -23,7 +23,7 @@
 
     <include
         layout="@layout/content_utente_main"
-        android:layout_height="744dp" />
+        android:layout_height="504dp" />
 
 
 
